@@ -11,7 +11,9 @@ export default {
         // counter(){
         // return this.$store.getters.finalCounter;
         // }
-        ...mapGetters(['finalCounter'])
+
+        //if using mapGetters use this format
+        ...mapGetters('numbers', ['finalCounter'])
     },
 }
 
