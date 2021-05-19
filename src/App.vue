@@ -23,7 +23,8 @@ export default {
   methods:{
     addOne(){
       // this.$store.commit('increase',{value: 10})
-      this.$store.commit({
+      //syntax for action/dispatch is almmost identical to mutation/commit
+      this.$store.dispatch({
         typeof: 'increase',
         value: 10
       })
