@@ -6,10 +6,12 @@ import App from './App.vue';
 const store = createStore({
     state(){
         return {
-            counter: 0
+            counter: 0,
+            isLoggedIn: false,
         };
     },
     mutations:{
+        //ONLY MANIPULATE STATE FROM MUTATIONS
         inrement(state){
             state.counter = state.counter + 2;
         },
@@ -18,6 +20,8 @@ const store = createStore({
         }
     },
     actions: {
+        //NEVER MANIPULATE STATE FROM ACTIONS 
+        //use mutations 
         increment(context){
             //commit can pass a mutation 
             setTimeout(()=>{
