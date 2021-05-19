@@ -10,17 +10,23 @@
 import BaseContainer from './components/BaseContainer.vue';
 import TheCounter from './components/TheCounter.vue';
 import TheCounter from './components/TheCounter.vue;'
-import ChangeCounter from './components/ChangeCounter.vue'
+import ChangeCounter from './components/ChangeCounter.vue';
+import FavoriteValue from './components/FavoriteValue.vue'
 
 export default {
   components: {
     BaseContainer,
     TheCounter,
-    ChangeCounter
+    ChangeCounter,
+    FavoriteValue
   },
   methods:{
     addOne(){
-      this.state.commit('increment')
+      // this.$store.commit('increase',{value: 10})
+      this.$store.commit({
+        typeof: 'increase',
+        value: 10
+      })
     }
   }
 };
